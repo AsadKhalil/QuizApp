@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="question_sets">Question Sets</string>
+</resources>

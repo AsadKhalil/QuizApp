@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/roundedbackground"
+    android:layout_margin="4dp"
+    android:padding="14dp"
+    android:layout_height="wrap_content">
+    <TextView
+
+        android:id="@+id/qstext"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:text="Question"
+        />
+    <TextView
+        android:id="@+id/anstext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:textColor="@android:color/black"
+        android:text="Answer with options"/>
+
+    <ImageButton
+
+        android:id="@+id/deleteicon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/bookmark_delete"
+        />
+
+
+</LinearLayout>
