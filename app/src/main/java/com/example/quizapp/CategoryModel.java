@@ -1,28 +1,43 @@
 package com.example.quizapp;
 
-public class CategoryModel
-{
-    private String imageurl,title;
+public class CategoryModel {
 
-    public CategoryModel(String imageurl, String title)
+
+    private String name;
+    private String url;
+    private int sets;
+
+    public CategoryModel()
     {
-        this.imageurl = imageurl;
-        this.title = title;
+
+    }
+    public String getName() {
+        return name;
     }
 
-    public String getImageurl() {
-        return imageurl;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getTitle() {
-        return title;
+    public String getUrl() {
+        return url;
     }
 
-    public void setImageurl(String imageurl) {
-        this.imageurl = imageurl;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public int getSets() {
+        return sets;
+    }
+
+    public void setSets(int sets) {
+        this.sets = sets;
+    }
+
+    public CategoryModel(String name, String url, int sets) {
+        this.name = name;
+        this.url = url;
+        this.sets = sets;
     }
 }

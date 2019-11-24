@@ -1,63 +1,79 @@
 package com.example.quizapp;
 
-public class questionmodel
-{
-    private String qs,opt1,opt2,opt3,opt4,correctans;
+public class QuestionModel {
+    private String question,optionA,optionB,optionC,optionD,correctAns;
+    private int setNumber;
 
-    public questionmodel(String qs, String opt1, String opt2, String opt3, String opt4, String correctans) {
-        this.qs = qs;
-        this.opt1 = opt1;
-        this.opt2 = opt2;
-        this.opt3 = opt3;
-        this.opt4 = opt4;
-        this.correctans = correctans;
+    public QuestionModel()
+    {
+
     }
 
-    public String getQs() {
-        return qs;
+    public String getQuestion() {
+        return question;
     }
 
-    public String getOpt1() {
-        return opt1;
+    public void setQuestion(String question) {
+        this.question = question;
     }
 
-    public String getOpt2() {
-        return opt2;
+    public String getOptionA() {
+        return optionA;
     }
 
-    public String getOpt3() {
-        return opt3;
+    public void setOptionA(String optionA) {
+        this.optionA = optionA;
     }
 
-    public String getOpt4() {
-        return opt4;
+    public String getOptionB() {
+        return optionB;
     }
 
-    public String getCorrectans() {
-        return correctans;
+    public void setOptionB(String optionB) {
+        this.optionB = optionB;
     }
 
-    public void setQs(String qs) {
-        this.qs = qs;
+    public String getOptionC() {
+        return optionC;
     }
 
-    public void setOpt1(String opt1) {
-        this.opt1 = opt1;
+    public void setOptionC(String optionC) {
+        this.optionC = optionC;
     }
 
-    public void setOpt2(String opt2) {
-        this.opt2 = opt2;
+    public String getOptionD() {
+        return optionD;
     }
 
-    public void setOpt3(String opt3) {
-        this.opt3 = opt3;
+    public void setOptionD(String optionD) {
+        this.optionD = optionD;
     }
 
-    public void setOpt4(String opt4) {
-        this.opt4 = opt4;
+    public String getCorrectAns() {
+        return correctAns;
     }
 
-    public void setCorrectans(String correctans) {
-        this.correctans = correctans;
+    public void setCorrectAns(String correctAns) {
+        this.correctAns = correctAns;
     }
+
+    public int getSetNumber() {
+        return setNumber;
+    }
+
+    public void setSetNumber(int setNumber) {
+        this.setNumber = setNumber;
+    }
+
+    public QuestionModel(String question, String optionA, String optionB, String optionC, String optionD, String correctAns, int setNumber) {
+        this.question = question;
+        this.optionA = optionA;
+        this.optionB = optionB;
+        this.optionC = optionC;
+        this.optionD = optionD;
+        this.correctAns = correctAns;
+        this.setNumber = setNumber;
+    }
+
+
 }

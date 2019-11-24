@@ -7,30 +7,49 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button startbutton,saveditembtn;
+    private Button startButton,bookmarkBtn ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        startbutton=(Button)findViewById(R.id.startquiz);
-        saveditembtn=(Button)findViewById(R.id.saveditembutton);
 
-        saveditembtn.setOnClickListener(new View.OnClickListener() {
+        startButton=findViewById(R.id.start_btn);
+        //startbutton click
+        bookmarkBtn=findViewById(R.id.bookmarks_btn);
+
+        MobileAds.initialize(this);
+        loadAds();
+        startButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                Intent intent2=new Intent(MainActivity.this,BookmarksActivity.class);
-                startActivity(intent2);
+            public void onClick(View view) {
+                Intent categoryIntent=new Intent(MainActivity.this,CategoriesActivity.class);
+                startActivity(categoryIntent);
             }
         });
-        startbutton.setOnClickListener(new View.OnClickListener() {
+
+        bookmarkBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,CategoryActivity.class);
-                startActivity(intent);
+            public void onClick(View view) {
+                Intent bookmarksIntent =new Intent(MainActivity.this,Bookmarks.class);
+                startActivity(bookmarksIntent);
             }
         });
     }
+
+    private void loadAds()
+    {
+        AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+    }
+
 }
