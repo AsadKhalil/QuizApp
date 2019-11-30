@@ -91,7 +91,7 @@ public class Bookmarks extends AppCompatActivity {
     private void storeBookmarks()
     {
         String json=gson.toJson(bookmarkList);
-        editor.putString("KEY_NAME",json);
+        editor.putString(KEY_NAME,json);
         editor.commit();
 
     }

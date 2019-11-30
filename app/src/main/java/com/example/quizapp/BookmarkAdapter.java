@@ -57,7 +57,7 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.ViewHo
         {
              this.question.setText(question);
              this.answer.setText(answer);
-            deleteBookmark.setOnClickListener(new View.OnClickListener() {
+               deleteBookmark.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
